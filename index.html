@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
     <title>NitroShip | Win NITRO at the #3 Discord Game Site!</title>
     <link rel="icon" href="images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
     <meta name="keywords" content="">
     <script>
         addEventListener("load", function () {
@@ -58,8 +58,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            flex-direction: column;
+            min-height: 100vh;
         }
         .signupform {
             background-color: #fff;
@@ -68,16 +67,17 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             max-width: 800px;
             width: 100%;
+            box-sizing: border-box;
         }
         .container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
         .w3l_form, .w3_info {
-            width: 48%;
-        }
-        .w3l_form .left_grid_info {
-            padding-right: 20px;
+            width: 100%;
+            margin-bottom: 20px;
         }
         .left_grid_info h1, .left_grid_info h2 {
             font-size: 24px;
@@ -105,10 +105,12 @@
         }
         .w3_info form {
             margin-top: 20px;
+            width: 100%;
         }
         .input-group {
             position: relative;
             margin-bottom: 20px;
+            width: 100%;
         }
         .input-group span {
             position: absolute;
@@ -144,6 +146,7 @@
         .account {
             margin-top: 20px;
             font-size: 16px;
+            text-align: center;
         }
         .account a {
             color: #337ab7;
@@ -156,13 +159,23 @@
             margin-top: 10px;
             font-size: 12px;
             color: #777;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .w3l_form, .w3_info {
+                width: 48%;
+                margin-bottom: 0;
+            }
         }
     </style>
 </head>
-<body>    
-<div class="signupform">
-    <div class="container">
-        <div class="agile_info">
+<body>
+    <div class="signupform">
+        <div class="container">
             <div class="w3l_form">
                 <div class="left_grid_info">
                     <h1>NitroShip | Discord Casino</h1>
@@ -183,24 +196,22 @@
                     <label>Username</label>
                     <div class="input-group">
                         <span class="fa fa-user" aria-hidden="true"></span>
-                        <input type="text" name="username" placeholder="Username" required=""> 
+                        <input type="text" name="username" placeholder="Username" required="">
                     </div>
                     <label>Password</label>
                     <div class="input-group">
                         <span class="fa fa-lock" aria-hidden="true"></span>
                         <input type="password" name="password" placeholder="Password" required="">
-                    </div> 
+                    </div>
                     <div class="login-check">
                         <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Agree to our terms of service</label>
-                   </div>                    
-                        <button class="btn btn-danger btn-block" type="submit">Log In</button>
+                    </div>
+                    <button class="btn btn-danger btn-block" type="submit">Log In</button>
                 </form>
                 <p class="account">New to NitroShip &amp; Discord? <a href="https://www.discord.com/register" target="_blank">Create an account</a></p>
                 <p class="account1">©NitroShip - Logo and Powering Imagination with Communication are among our registered and unregistered trademarks in the U.S.A. and other countries.<a href="#"></a></p>
             </div>
         </div>
     </div>
-</div>
-
 </body>
 </html>
